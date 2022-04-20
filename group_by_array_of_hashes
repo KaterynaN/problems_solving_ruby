@@ -1,0 +1,17 @@
+# get list ids, grouped by parent_id
+
+arr = [{id: 1, parent_id: 11, some_info: 'bla'}, 
+    {id: 2, parent_id: 11, some_info: 'gff'}, 
+    {id: 3, parent_id: 12, some_info: 'rtt'}]
+
+puts arr.group_by {|a| a[:parent_id]}.transform_values { |v| v.map {|el| el[:id]} }
+
+
+
+
+
+
+
+
+
+
